@@ -1,3 +1,15 @@
+const mysql=require("mysql2/promise");
+const pool=mysql.createPool({
+  host:"127.0.0.1",
+  port:3306,
+  user:"root",
+  password:"Sidpaw.1508",
+  database:"hrfna",
+  waitForConnections:true,
+  connectionLimit:10,
+});
+module.exports=pool;
+/*
 const memoryTables = {
   table1: [{ id: 1, name: "John" }],
   table2: [
@@ -34,4 +46,4 @@ function getInMemoryTables() {
 module.exports = {
   executeActionInDb,
   getInMemoryTables,
-};
+};*/
